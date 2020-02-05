@@ -1,6 +1,6 @@
 class CashRegister
 
-  attr_accessor :total, :discount, :items, :cart
+  attr_accessor :discount, :items, :cart
 
   def initialize(discount = 0)
     @total, @discount, @items = 0, discount, []
@@ -8,7 +8,8 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += (price * quantity)
+    #@total += (price * quantity)
+    
     quantity.times{ @items.push(title)}
     @cart[title] ||= { "quantity" => quantity, "price" => price}
   end
