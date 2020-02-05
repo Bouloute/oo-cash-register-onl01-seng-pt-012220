@@ -8,7 +8,7 @@ class CashRegister
     @cart = {}
   end
 
-  def total=
+  def total
     tots = 0
     @cart.each{|item|
       tots += item["quantity"] * item["price"]
