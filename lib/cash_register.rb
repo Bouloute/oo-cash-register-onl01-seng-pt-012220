@@ -11,7 +11,8 @@ class CashRegister
     #@total += (price * quantity)
 
     quantity.times{ @items.push(title)}
-    @cart[title] ||= { "quantity" => quantity, "price" => price}
+    @cart[title] ||= { "quantity" => 0, "price" => price}
+    @cart[title]["quantity"] += quantity
   end
 
   def apply_discount
