@@ -9,12 +9,13 @@ class CashRegister
   end
 
   def total
-    tots = 0
+    @total = 0
     @cart.each{|item|
-      tots += item["quantity"] * item["price"]
+      @total += item["quantity"] * item["price"]
     }
-    tots
+    @total
   end
+  
   def add_item(title, price, quantity = 1)
     #@total += (price * quantity)
 
