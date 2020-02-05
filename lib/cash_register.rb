@@ -23,6 +23,6 @@ class CashRegister
   end
 
   def void_last_transaction
-
+    puts @cart
   end
 end
