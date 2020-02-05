@@ -7,6 +7,13 @@ class CashRegister
     @cart = {}
   end
 
+  def total=
+    tots = 0
+    @cart.each{|item|
+      tots += item["quantity"] * item["price"]
+    }
+    tots
+  end
   def add_item(title, price, quantity = 1)
     #@total += (price * quantity)
 
